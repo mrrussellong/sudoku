@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - Classic Number Puzzle Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #1a3a5c 0%, #2d5a87 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 48px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 56px;
+            color: #1a3a5c;
+            font-weight: bold;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            padding: 48px;
+            margin-bottom: 24px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .feature {
+            text-align: center;
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 16px;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        .feature h3 {
+            color: #1a3a5c;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .feature p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+        .cta {
+            text-align: center;
+            padding: 32px;
+            background: linear-gradient(135deg, #1a3a5c 0%, #2d5a87 100%);
+            border-radius: 16px;
+            color: white;
+        }
+        .cta h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .cta p {
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        .app-store-btn {
+            display: inline-block;
+            background: white;
+            color: #1a3a5c;
+            padding: 14px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 24px;
+        }
+        .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        .links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            padding-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="logo">S</div>
+            <h1>Sudoku</h1>
+            <p class="tagline">The classic number puzzle, beautifully designed</p>
+            <div class="badges">
+                <span class="badge">iPhone</span>
+                <span class="badge">iPad</span>
+                <span class="badge">Apple TV</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Two Game Modes</h3>
+                    <p>Classic Sudoku and challenging Killer Sudoku with cage-based puzzles</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Four Difficulties</h3>
+                    <p>From Easy for beginners to Expert for Sudoku masters</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📅</div>
+                    <h3>Daily Challenges</h3>
+                    <p>New puzzle every day to build your streak</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Themes</h3>
+                    <p>Multiple themes to personalize your experience</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">☁️</div>
+                    <h3>iCloud Sync</h3>
+                    <p>Progress syncs across all your devices</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📺</div>
+                    <h3>Apple TV Ready</h3>
+                    <p>Enjoy Sudoku on the big screen</p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <h2>Download Now</h2>
+                <p>Available on the App Store for iPhone, iPad, and Apple TV</p>
+                <a href="https://apps.apple.com/app/id0000000000" class="app-store-btn">Download on the App Store</a>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:mrrussellong@gmail.com">Contact</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Technoverge. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
